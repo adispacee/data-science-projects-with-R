@@ -27,26 +27,46 @@ sum(duplicated(data2))
 boxplot(data2[,2:8])
 summary(data2)
 data2_numeric <- data2[sapply(data2, is.numeric)]
-cor(data2_numeric)
+cor_matrix<-cor(data2_numeric)
+cor_matrix
+library(corrplot)
+corrplot(cor_matrix)
 contrib <- data2_numeric[, !(names(data2_numeric) %in% "life_satisfaction")] / 
   data2$life_satisfaction 
 
-colMeans(contrib, na.rm = TRUE)*100
+contrib_mean<-colMeans(contrib, na.rm = TRUE)*100
+contribution_df <- data.frame(
+  Factor = names(contrib_mean),
+  Contribution = as.numeric(contrib_mean)
+)
+library(ggplot2)
+
+ggplot(contribution_df,
+       aes(x = reorder(Factor, Contribution),
+           y = Contribution)) +
+  geom_col() +
+  coord_flip() +
+  labs(
+    title = "Average Contribution of Factors",
+    x = "Factor",
+    y = "Average Contribution (%)"
+  )
+
 
 top <- data2[order(data2$life_satisfaction, decreasing = TRUE), ]
   head(top, 10)
   bottom <- data2[order(data2$life_satisfaction), ]
   head(bottom, 10)
-  # remove life satisfaction (target variable)
+  
   vars_data <- data2_numeric[, !(names(data2_numeric) %in% "life_satisfaction")]
   
-  # standard deviation (spread)
+  
   sd_values <- apply(vars_data, 2, sd, na.rm = TRUE)
   
-  # sort from highest to lowest
+  
   sort(sd_values, decreasing = TRUE)
 
-  # threshold (median split)
+  
   threshold <- median(data2$life_satisfaction, na.rm = TRUE)
   
   happy <- contrib[data2$life_satisfaction >= threshold, ]
@@ -56,6 +76,28 @@ top <- data2[order(data2$life_satisfaction, decreasing = TRUE), ]
   
   happy_mean
   unhappy_mean
+  happy_unhappy <- data.frame(
+    Factor = names(happy_mean),
+    Happy = as.numeric(happy_mean),
+    Unhappy = as.numeric(unhappy_mean)
+  )
+  happy_unhappy_long <- reshape(
+    happy_unhappy,
+    varying = c("Happy", "Unhappy"),
+    v.names = "Value",
+    timevar = "Group",
+    times = c("Happy", "Unhappy"),
+    direction = "long"
+  )
+  ggplot(happy_unhappy_long,
+         aes(x = Factor, y = Value, fill = Group)) +
+    geom_col(position = "dodge") +
+    labs(
+      title = "Factors in Happy vs Unhappy Countries",
+      x = "Factor",
+      y = "Average Relative Value (%)",
+      fill = "Country Group"
+    )
   
   top10 <- data2[order(-data2$life_satisfaction), ][1:10, ]
   bottom10 <- data2[order(data2$life_satisfaction), ][1:10, ]
@@ -80,7 +122,6 @@ top <- data2[order(data2$life_satisfaction, decreasing = TRUE), ]
   )
   
   comparison
-  
   
 
 
