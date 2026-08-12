@@ -28,6 +28,7 @@ An important characteristic of this dataset is that these factors are not indepe
 In other words, the contributions of the different factors, together with the residual component, approximately add up to the country's overall life satisfaction score.
 Therefore, this project does not treat the contributing factors as independent predictors of life satisfaction. Instead, the analysis focuses on understanding the relative contribution of different factors to the overall life satisfaction score and exploring how the composition of these contributions differs across countries.
 
+Dataset: https://github.com/adispacee/data-science-projects-with-R/blob/main/happiness%20index%20data.csv
 Source: World Happiness Report powered by data from Gallop World Poll
 
 
