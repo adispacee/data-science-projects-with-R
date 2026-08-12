@@ -23,9 +23,11 @@ The dataset contains a Life Evaluation (life satisfaction) score for each countr
 - Generosity
 - Perceptions of corruption
 - Dystopia + residual
+
 An important characteristic of this dataset is that these factors are not independent raw measurements. Instead, the reported contribution values are components of the overall Life Evaluation score.
 In other words, the contributions of the different factors, together with the residual component, approximately add up to the country's overall life satisfaction score.
 Therefore, this project does not treat the contributing factors as independent predictors of life satisfaction. Instead, the analysis focuses on understanding the relative contribution of different factors to the overall life satisfaction score and exploring how the composition of these contributions differs across countries.
 
-The dataset used in this project is stored in:
+Source: World Happiness Report powered by data from Gallop World Poll
+
 
