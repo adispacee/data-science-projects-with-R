@@ -58,7 +58,7 @@ The observed patterns were interpreted in the context of the research questions,
   
 
 Results:
-1. Summary Statistics
+1. **Summary Statistics**
  The following table presents the main statistical results obtained from the dataset.
 
 | Variable | Min | 1st Quartile | Median | Mean | 3rd Quartile | Max |
@@ -71,7 +71,7 @@ Results:
 | Generosity | 0.000 | 0.061 | 0.107 | 0.1067 | 0.144 | 0.295 |
 | Corruption | 0.000 | 0.071 | 0.115 | 0.1473 | 0.188 | 0.512 |
 
-2. Correlation Analysis
+2. **Correlation Analysis**
    The correlation matrix showed several notable relationships with life satisfaction:
 
 | Factor | Correlation with Life Satisfaction |
@@ -92,17 +92,13 @@ r = -0.091**
 This indicates a very weak negative association between GDP and generosity in the dataset.
 Because the relationship is very weak, it should not be interpreted as evidence that higher GDP causes lower generosity.
 
-Average Relative Values:
+3.**Average Relative Values:**
 
 To compare the factors relative to life satisfaction, a relative contribution measure was calculated for each country.
 For each factor, its value for a country was divided by that country's life satisfaction score and multiplied by 100:
 Relative Contribution = (Factor Value / Life Satisfaction) × 100
 The resulting percentages were then averaged across all countries to obtain the overall average relative value for each factor.
 This provides a descriptive measure of how large each factor's value is relative to the life satisfaction score within the same country.
-
-
-
-
 
 | Factor | Average Relative Value(%) |
 |---|---:|
@@ -119,7 +115,7 @@ Freedom and life expectancy had average relative contributions of approximately 
 Generosity had the smallest average relative contribution at approximately 1.98%.
 The corruption-related variable had an average relative contribution of approximately 2.60%.
 
-Top 10 vs Bottom 10 Countries:
+4.**Top 10 vs Bottom 10 Countries:**
 
 The mean values of the selected factors were compared between the 10 countries with the highest life satisfaction and the 10 countries with the lowest life satisfaction.
 
@@ -136,7 +132,7 @@ The largest differences between the two groups were observed for GDP, social sup
 The high-satisfaction group also had higher average freedom and generosity values.
 
 
-Median-Based Comparison of Life Satisfaction Groups:
+5.**Median-Based Comparison of Life Satisfaction Groups:**
 
 To further investigate differences between countries with different levels of life satisfaction, the median life satisfaction score was used as a threshold.
 Countries were divided into two groups:
@@ -158,7 +154,7 @@ The average relative contribution of each factor was then calculated separately 
 The comparison shows that the relative composition of the factors differs between the two groups.
 Rather than focusing only on GDP, this comparison highlights the differences in the broader set of factors associated with life satisfaction. In particular, the higher relative values of social support and life expectancy in the happy group suggest that social and human well-being are important dimensions to consider alongside economic conditions.The results do not mean that these factors cause higher or lower life satisfaction. They simply describe how the relative values of the factors differ between the two groups.
 
-GDP and Life Satisfaction
+6.**GDP and Life Satisfaction:**
 
 GDP showed a strong positive correlation with life satisfaction (`r = 0.745`). The scatter plot also shows a clear upward trend, indicating that countries with higher GDP generally tend to report higher life satisfaction.However, the relationship is not perfect. There is noticeable variation in life satisfaction among countries with similar GDP levels.An important observation is that **Singapore has the highest GDP in the dataset, while Finland has the highest life satisfaction**. This shows that the country with the strongest economic indicator is not necessarily the country with the highest reported life satisfaction.
 Therefore, although GDP appears to be an important factor associated with life satisfaction, it does not fully explain differences in well-being. Other factors, including social support, life expectancy, freedom, generosity, and corruption, may also contribute to differences between countries
@@ -166,6 +162,7 @@ Therefore, although GDP appears to be an important factor associated with life s
 
 
 Limitations:
+
 -The data are country-level observations rather than individual-level observations.
 -Correlation does not imply causation.
 -The relative contribution measure is a descriptive ratio and should not be interpreted as a causal or statistical contribution.
