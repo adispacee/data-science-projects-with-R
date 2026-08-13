@@ -123,7 +123,19 @@ top <- data2[order(data2$life_satisfaction, decreasing = TRUE), ]
   
   comparison
   
-
+data1[which.max(data2$gdp), c("Country name", "gdp", "life_satisfaction")]
+  
+  data1[which.max(data2$life_satisfaction), c("Country name", "gdp", "life_satisfaction")]
+  library(ggplot2)
+  
+  ggplot(data2, aes(x = gdp, y = life_satisfaction)) +
+    geom_point() +
+    geom_smooth(method = "lm", se = FALSE) +
+    labs(
+      title = "GDP vs Life Satisfaction",
+      x = "GDP",
+      y = "Life Satisfaction"
+    )  
 
 
 
