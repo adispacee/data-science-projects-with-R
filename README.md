@@ -161,6 +161,9 @@ Rather than focusing only on GDP, this comparison highlights the differences in 
 
 6.**GDP and Life Satisfaction:**
 
+https://github.com/adispacee/data-science-projects-with-R/blob/main/plots/Rplot%20scat%20gdpvs%20satisfaction.png
+
+
 GDP showed a strong positive correlation with life satisfaction (`r = 0.745`). The scatter plot also shows a clear upward trend, indicating that countries with higher GDP generally tend to report higher life satisfaction.However, the relationship is not perfect. There is noticeable variation in life satisfaction among countries with similar GDP levels.An important observation is that **Singapore has the highest GDP in the dataset, while Finland has the highest life satisfaction**. This shows that the country with the strongest economic indicator is not necessarily the country with the highest reported life satisfaction.
 Therefore, although GDP appears to be an important factor associated with life satisfaction, it does not fully explain differences in well-being. Other factors, including social support, life expectancy, freedom, generosity, and corruption, may also contribute to differences between countries
 
