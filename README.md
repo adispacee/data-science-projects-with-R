@@ -109,6 +109,7 @@ This provides a descriptive measure of how large each factor's value is relative
 | Generosity | 1.982009 |
 | Corruption | 2.599711 |
 
+https://github.com/adispacee/data-science-projects-with-R/blob/main/plots/Rplot%20avg%20contribution.png
 
 GDP had the highest average relative contribution at approximately 27.53%, followed by social support at 20.99%.
 Freedom and life expectancy had average relative contributions of approximately 15.83% and 10.67%, respectively.
