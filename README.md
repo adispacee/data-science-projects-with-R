@@ -74,6 +74,8 @@ Results:
 2. **Correlation Analysis**
    The correlation matrix showed several notable relationships with life satisfaction:
 
+   https://github.com/adispacee/data-science-projects-with-R/blob/main/plots/Rplot%20corr.png?raw=true
+
 | Factor | Correlation with Life Satisfaction |
 |---|---:|
 | Social Support | 0.812 |
@@ -82,6 +84,8 @@ Results:
 | Freedom | 0.638 |
 | Corruption | 0.396 |
 | Generosity | 0.038 |
+
+
 
 Social support showed the strongest positive correlation with life satisfaction, followed by GDP, life expectancy, and freedom.
 Generosity showed almost no linear correlation with life satisfaction.
